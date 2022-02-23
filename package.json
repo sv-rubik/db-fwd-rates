@@ -6,7 +6,7 @@
   "scripts": {
     "start": "index.html"
   },
-  "keywords": [],
+  "keywords": ["forward rates"],
   "author": "Svetlana Rubinshtein",
   "license": "ISC"
 }
