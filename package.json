@@ -1,0 +1,12 @@
+{
+  "name": "db_fwd_rates_simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "index.html"
+  },
+  "keywords": [],
+  "author": "Svetlana Rubinshtein",
+  "license": "ISC"
+}

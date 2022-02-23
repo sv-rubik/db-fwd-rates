@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FWD rates dynamics</title>
+  <style>
+    #myChart, #myChart2, #myChart3 {
+      max-width:800px;
+      max-height:400px;
+    }
+
+    /*.box {*/
+    /*  display: flex;*/
+    /*  !*align-items: stretch;*!*/
+    /*  flex-wrap: wrap;*/
+    /*  align-content: space-between;*/
+    /*}*/
+
+    .charts {
+      /*min-width:730px;*/
+      margin-right: 20px;
+      /*text-align: center;*/
+    }
+
+    h1 {
+      color: #1e577e;
+      font-family: sans-serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.68px;
+      text-decoration: none;
+    }
+
+/*    .heading-small {
+      color: #1e577e;
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.68px;
+      text-decoration: none;
+      margin: 0;
+    }*/
+
+    .note {
+      color: #636364;
+      font-family: sans-serif;
+      font-size: 10px;
+      font-weight: 100;
+      letter-spacing: 0.68px;
+      text-decoration: none;
+    }
+
+    a.chart {
+      background-color: #FFFFFF;
+      border: 1px solid #CCCCCC;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+      transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+      border-radius: 4px;
+      color: #1e577e;
+      display:block;
+      width:80px;
+      margin: 10px auto 20px 0;
+      font-size: 14px;
+      font-family: sans-serif;
+      font-weight: 100;
+      text-align:center;
+      height: 15px;
+      line-height: 15px;
+      padding: 4px 6px;
+      vertical-align: middle;
+      text-decoration:none;
+    }
+    a.chart:hover {
+      border-color: rgba(82, 168, 236, 0.8);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+      outline: 0 none;
+    }
+
+  </style>
+
+  <link rel="icon" href="https://co71783.tmweb.ru/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="https://co71783.tmweb.ru/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+
+  <h1 class="heading">Deutsche Bank EUR/RUB buy FWD rates Dynamics</h1>
+  <p class="note">*FWD rates are not available on weekends due to closed market</p>
+  <div class="box">
+    <div class="charts">
+<!--      <h4 class="heading-small">12M FWD rates</h4>-->
+      <canvas id="myChart"></canvas>
+      <a class="chart"  href="##" onclick="updateChart()">Refresh</a>
+    </div>
+
+    <div class="charts">
+<!--      <h4 class="heading-small">24M FWD rates</h4>-->
+      <canvas id="myChart2"></canvas>
+      <a class="chart"  href="##" onclick="updateChart2()">Refresh</a>
+    </div>
+
+    <div class="charts">
+<!--      <h4 class="heading-small">FWD rates as of today</h4>-->
+      <canvas id="myChart3"></canvas>
+      <a class="chart"  href="##" onclick="updateChart3()">Refresh</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/1.3.0/chartjs-plugin-annotation.min.js" integrity="sha512-1i3fuBf28VgGPXL0VAZrrZO0KvkTdYahuinzvEOFD/xKW5GdYKysg/nqddN7Wec27NmdR3YynxX+BygjomOx5A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <script src="chart1.js"></script>  <!--type="module"-->
+  <script src="chart2.js"></script>
+  <script src="chart3.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", ready)
+    function ready() {
+      // getHistData12m()
+      // getHistData24m()
+      updateChart()
+      updateChart2()
+      updateChart3()
+    }
+  </script>
+</body>
+</html>
