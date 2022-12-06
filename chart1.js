@@ -87,7 +87,7 @@ const config = {
         scales: {
             y: {
                 beginAtZero: false,
-                suggestedMin: 80,
+                suggestedMin: 70,
             }
         }
     },
